@@ -1,0 +1,37 @@
+/* Fuente Montserrat */
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../style/Fuentes/static/Montserrat-Thin.ttf) format("truetype"); 
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../style/Fuentes/static/Montserrat-Light.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../style/Fuentes/static/Montserrat-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../style/Fuentes/static/Montserrat-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../style/Fuentes/static/Montserrat-Black.ttf) format("truetype");
+    font-style: bolder;
+    font-size: large;
+    font-weight: 900;
+}

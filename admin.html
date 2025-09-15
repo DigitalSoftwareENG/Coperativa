@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Administración</title>
+</head>
+<body class="BodyLogin">
+    <form class="FormRegistro" action="api/validaradmin.php" method="POST">
+        
+        <a href="index.html" class="btn-volver">⮜</a>            
+        <h1>Administrador</h1>
+        <div class="ordenLogin">
+
+            
+            <div>
+            <input type="text" placeholder="ADMINISTRADOR" id=regAdmin name="Administrador" required minlength="3" maxlength="25" />
+            </div>
+            
+            <div>
+            <input type="password" placeholder="CONTRASEÑA" id="regPass" name="Contrasena" required />
+            </div>
+            
+            <label class="ErrorLogin" id="error-label" >
+            Usuario o contraseña incorrectos</label>
+
+            <input type="submit" value="INICIAR SESIÓN">
+            
+
+        </div>
+    </div>
+    </form>
+
+    <script src="js/error.js"></script>
+</body>
+</html>

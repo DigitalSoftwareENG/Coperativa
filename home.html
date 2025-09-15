@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Home</title>
+</head>
+<body class="BodyHome">
+<header class="HeaderHomes">
+    
+        <a href="api/Logout.php">⮜ Cerrar Sesión</a>
+   
+    
+    
+        <h2>Home</h2>
+    
+
+</header>
+
+<main>
+    <div class="DivisorHome">
+        
+        <div>
+            <a class="HorasTrabajo" href="#" onclick="toggleMenu(event, 'menuHoras')">Marcar Horas de trabajo</a>
+            <form method="post" class="menu-horas" id="menuHoras" action="api/horas.php">
+                <label for="HoraInicio">Inicio de Horario</label>
+                <input type="time" name="RegHoraInicio" id="HoraInicio" required>
+
+                <label for="HoraFinal">Final de Horario</label>
+                <input type="time" name="RegHoraFinal" id="HoraFinal" required>
+
+                <label for="Fecha">Fecha de su Horario</label>
+                <input type="date" name="RegFecha" id="Fecha" required>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        
+        <div>
+            <a class="ComprobantePago" href="#" onclick="toggleMenu(event, 'menuComprobante')">Subir Comprobante</a>
+            <form class="menu-comprobante" id="menuComprobante" action="api/comprobantes.php" method="post" enctype="multipart/form-data">
+                <label for="referencia">Número de referencia:</label>
+                <input type="text" id="referencia" name="referencia" placeholder="Ej: 123456789" required>
+
+                <label for="comprobante">Selecciona tu comprobante:</label>
+                <input type="file" id="comprobante" name="comprobante" accept=".jpg,.jpeg,.png,.pdf" required>
+                <p class="nota">Formatos permitidos: JPG, PNG o PDF (máx. 5 MB)</p>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="js/home.js"></script>
+</body>
+</html>
