@@ -1,0 +1,855 @@
+/* Inicio de Clases Body */
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.BodyRegistro {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+.BodyLogin {
+    display: flex;
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    flex-direction: column;
+}
+
+.BodyIndex {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    display: grid;
+    place-items: center;
+}
+
+.BodyHome {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+}
+/* Final de Clases Body */
+
+
+/* Inicio de estilos de Index*/
+.GridIndex {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main"
+    "footer footer footer";
+}
+
+header {
+    color: rgb(58, 89, 148);
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+    font-family: Montserrat;
+    border-bottom: 2px solid rgb(58, 89, 148);
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    min-width: 50%;
+}
+
+header h1 {
+    margin-left: 10px;
+}
+
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header a {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 800;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: black;
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+    margin: 5px;
+    box-sizing: content-box;
+}
+
+header a:hover {
+    border: 2px solid transparent;
+    background-color: rgb(145, 145, 145);
+    color: rgb(241, 241, 241);
+}
+
+header a#Cuenta {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 800;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(58, 89, 148);
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+    grid-column: 10 /span 1 ;
+    justify-self: end;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+header a#Cuenta:hover {
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(58, 89, 148);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-color: rgb(58, 89, 148);
+
+}
+
+header a#admin {
+    font-family: Montserrat;
+    font-weight: 800;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(148, 58, 58);
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-column: 9 /span 1;
+    justify-self: end;
+}
+
+header a#admin:hover {
+    color: rgb(148, 58, 58);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-color: rgb(148, 58, 58);
+}
+
+.HeaderHomes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: rgb(58, 89, 148);
+    background-color: rgb(241, 241, 241);
+    font-family: Montserrat;
+    border-bottom: 2px solid rgb(58, 89, 148);
+    width: 100%;
+    gap: 10px;
+}
+
+.HeaderHomes h2 {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.HeaderHomes a {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 800;
+    padding: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: black;
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+    margin: 5px;
+    box-sizing: content-box;
+}
+
+.HeaderHomes a:hover {
+    border: 2px solid transparent;
+    background-color: rgb(145, 145, 145);
+    color: rgb(241, 241, 241);
+}
+
+
+
+.wrapper-imagenes {
+    display: grid;
+    place-items: center; 
+    margin-top: 50% 50%;
+}
+
+.ContenedorImagenes {
+    margin-top: 20px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    width: 1200px;
+    animation-delay: 0.5;
+    transition: transform 0.7s ease;
+    justify-content: center;
+    align-content: center;
+}
+
+.ContenedorImagenes img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.ContenedorImagenes img:hover {
+    transform: scale(1.10);
+}
+
+
+
+.ContenedorImagenes img:first-child {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+
+.ContenedorImagenes img:last-child {
+    grid-column: 4;
+}
+
+.Textos {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto;
+    margin: 15px 20% 15px 20%;
+    text-align: center;
+    gap: 7px;
+    padding: 10px;
+    font-family: Montserrat;
+    border: 2px solid transparent;
+}
+
+.Quienes {
+    display: block;
+    border: 2px solid transparent;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+    grid-column: span 2;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.Quienes h2 {
+    font-weight: 900;
+    color: rgb(58, 89, 148);
+    font-size: 40px;
+}
+
+.CuadradoTextIzquierda {
+    border: 2px solid transparent;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.CuadradoTextIzquierda h2 {
+    color: rgb(58, 89, 148);
+    font-size: 32px;
+}
+
+.CuadradoTextDerecha {
+    border: 2px solid transparent;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.CuadradoTextDerecha h2 {
+    color: rgb(58, 89, 148);
+    font-size: 32px;
+}
+/* Footer siempre abajo */
+footer {
+    width: 100%;
+    background-color: rgb(40, 60, 110);
+    position: static;
+    text-align: center;   
+    color: rgb(241, 241, 241);
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 0;
+    z-index: 100;
+}
+
+footer h2 {
+    font-size: 24px;
+    font-weight: 800;
+    border-bottom: 2px solid rgb(241, 241, 241);
+    padding-top: 10px;
+    margin: auto;
+    width: fit-content;
+}
+
+
+
+
+/* Final de Estilos de Index */
+
+/* Inicio estilos de Registro */
+.FormRegistro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(241, 241, 241);
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.FormRegistro h1 {
+    letter-spacing: 4px;
+    text-align: center;
+    grid-column: span 2;
+    margin-bottom: 90px;
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 50px;
+    color: rgb(58, 89, 148);
+}
+
+.FormRegistro p {
+    text-align: center;
+    grid-column: span 2;
+    grid-row: span 2;
+    font-family: Montserrat;
+}
+
+.ordenformulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.ordenformulario input:not([type="submit"]) {
+    font-family: Montserrat;
+    border: 2px rgb(155, 155, 155) solid;
+    border-radius: 10px;
+    box-sizing: content-box;
+    padding: 10px;
+}
+
+.ordenformulario input[type="submit"] {
+    font-family: Montserrat;
+    border: 2px rgb(155, 155, 155) solid;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.ordenformulario input:not([type="submit"]):hover {
+    outline: 2px solid rgb(58, 89, 148);
+    border-color: rgb(58, 89, 148);
+}
+
+.ordenformulario input:not([type="submit"]):focus {
+    outline: 1px solid rgb(58, 89, 148);
+    border-color: rgb(58, 89, 148);
+}
+
+.ordenformulario a {
+    text-decoration: none;
+}
+
+.ordenformulario a:hover {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.ordenformulario input[type="submit"] {
+    grid-column: span 2;
+    grid-row: span 2;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+} 
+
+.ordenformulario input[type="submit"]:hover {
+    background-color: rgb(58, 89, 148);
+    color: rgb(255, 255, 255);
+    border-color: rgb(58, 89, 148);
+    cursor: pointer;
+    transition: 0.3;
+}
+/* Final de Estilos de Register*/
+
+
+
+/* Inicio de Estilos de Login */
+
+.ErrorLogin {
+    display: none; 
+    padding: 10px;
+    color:rgb(175, 37, 37);
+    font-weight:bold; 
+    text-align:center;
+    border: 2px solid rgb(175, 37, 37);
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-weight: 400;
+    background-color: rgba(236, 116, 116, 0.63);
+}
+
+.ordenLogin {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.ordenLogin input:not([type="submit"]) {
+    width: 100%;
+    font-family: Montserrat;
+    border: 2px rgb(155, 155, 155) solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.ordenLogin input:not([type="submit"]):hover {
+    outline: 2px solid rgb(58, 89, 148);
+    border-color: rgb(58, 89, 148);
+}
+
+.ordenLogin input:not([type="submit"]):focus {
+    outline: 1px solid rgb(58, 89, 148);
+    border-color: rgb(58, 89, 148);
+}
+
+.ordenLogin input[type="submit"] {
+    font-family: Montserrat;
+    border: 2px rgb(155, 155, 155) solid;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.ordenLogin a {
+    text-decoration: none;
+    transition-property: underline;
+    transition-duration: 0.5s;
+}
+
+.ordenLogin a:hover {
+    font-weight: 900;
+}
+
+.ordenLogin input[type="submit"] {
+    grid-column: span 2;
+    grid-row: span 2;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+} 
+
+.ordenLogin input[type="submit"]:hover {
+    background-color: rgb(58, 89, 148);
+    color: rgb(255, 255, 255);
+    border-color: rgb(58, 89, 148);
+    cursor: pointer;
+    transition: 0.3;
+}
+/* Final de Estilos de Login*/
+
+
+
+
+/* Inicio Boton de regreso */
+.btn-volver {
+ position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: rgb(241, 241, 241);
+    color: rgb(58, 89, 148);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-size: 20px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.btn-volver:hover {
+    color:rgb(241, 241, 241);
+    background-color: rgb(40, 60, 110);
+}
+/* Final Boton de regreso */
+
+
+
+/* Inicio de estilos de Home Users */
+
+
+.DivisorHome {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+}
+
+.DivisorHome div {
+    background-color: rgb(241, 241, 241);
+    margin: auto;
+    padding: 10px;
+    font-family: Montserrat;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    display: grid;
+    margin: 20px 20px;
+}
+
+.DivisorHome div a {
+    background-color: rgb(58, 89, 148);
+    padding: 10px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+    box-sizing: content-box;
+    width: fit-content;
+    
+}
+
+.DivisorHome div a:hover {
+    background-color: rgb(145, 145, 145);
+}
+
+
+.menu-horas {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.menu-horas label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menu-horas input {
+    display: block;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgb(150, 150, 150);
+    font-family: Montserrat;
+}
+
+.menu-horas input[type="submit"] {
+    background-color: rgb(58, 89, 148);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    margin: 20px;
+}
+
+.menu-horas input[type="submit"]:hover {
+    background-color: rgb(40, 60, 110);
+    }
+
+
+
+.menu-comprobante {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    }
+
+.menu-comprobante label {
+    display: block;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: bold;
+    }
+
+.menu-comprobante input[type="file"],
+.menu-comprobante input[type="text"] {
+    
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(150, 150, 150);
+    font-family: Montserrat;
+    box-sizing: border-box;
+    }
+
+
+.menu-comprobante .nota {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+    }
+
+.menu-comprobante button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(58, 89, 148);
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+.menu-comprobante button:hover {
+    background-color: rgb(40, 60, 110);
+    }
+
+.cerrarsesion {
+    margin-right: 10px;
+}
+
+/* Final de estilos de Home Users */
+
+/* Inicio de estilos de Home Admins*/
+
+.HomeAdmin {
+    background-color: rgb(241, 241, 241);
+    box-sizing: content-box;
+    margin: 10px auto 10px auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    width: 75%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.HomeAdmin h2 {
+    font-family: Montserrat;
+    font-size: 32px;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: auto;
+    border: 7px solid transparent;
+    border-radius: 7px;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: separate;  /* permite border-radius */
+    border-spacing: 0;          /* sin espacio entre celdas */
+    font-family: Montserrat, sans-serif;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.DatosUsuarios th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border: 1px solid transparent;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+
+/* Inicio de donde se muestran los datos de los usuarios */
+
+.DatosUsuarios td {
+    background-color: rgb(231, 231, 231);
+    padding: 7px;
+}
+
+.DatosUsuarios th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.DatosUsuarios th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.DatosUsuarios th:last-child {
+    border-right: none;
+}
+
+.DatosUsuarios th:not(:first-child) {
+    border-left: 1px solid black;
+}
+
+.tabla-usuarios a {
+    color: #007bff;
+    text-decoration: none;
+}
+.tabla-usuarios a:hover {
+    text-decoration: underline;
+}
+
+.btn-aprobar {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 800;
+    padding: 8px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(58, 89, 148);
+    transition: background-color, color, font-weight;
+    transition-duration: 0.5s;
+}
+
+.btn-aprobar:hover {
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(58, 89, 148);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-color: rgb(58, 89, 148);
+
+}
+
+/* Final de donde se muestran los datos de los usuarios */
+
+/* Final de estilo de Home Admins*/
+
+.container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;        
+    max-width: 300px;     
+    aspect-ratio: 3 / 4;  
+    object-fit: cover;    
+    border-radius: 10px;
+    transition: 300ms ease-in-out;
+    box-shadow: 0 5px 10px 0 #0a0a0a7c;
+}
+
+/* Cuando la pantalla sea menor a 600px */
+@media (max-width: 600px) {
+
+    .card {
+        max-width: 200px;   /* antes 300px */
+        aspect-ratio: 3 / 4;
+    }
+
+    .card + .card {
+        margin-left: -15%;  /* separacion ajustada para pantallas chicas */
+    }
+
+    .card:hover ~ .card {
+        translate: 25px;    /* menos desplazamiento en pantallas chicas */
+    }
+}
+
+
+
+.card + .card {
+    margin-left: -10%;
+}
+
+.card:hover {
+    transform: rotate(-6deg);
+}
+
+.card:hover ~ .card {
+    z-index: 1;
+    translate: 60px;
+}
+
+.headVerComprobante {
+    background-color: red;
+}
+
+
+
+        .ContainerVer {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Montserrat;
+            text-align: center;
+            position: relative;
+        }
+
+        .tablaVer {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .tablaVer th,
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e9ecef;
+        }
+
+        .btn-view {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .btn-view:hover {
+            opacity: 0.8;
+        }
+
+        .status-pendiente {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .status-verificado {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-rechazado {
+            color: red;
+            font-weight: bold;
+        }
+
+        

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Inicio Sesion</title>
+</head>
+
+
+<body class="BodyLogin">
+    <form autocomplete="off" action="api/login.php" class="FormRegistro" method="post">
+        
+        <a href="index.html" class="btn-volver">⮜</a>            
+        <h1>Iniciar Sesión</h1>
+        <div class="ordenLogin">
+            
+            <div>
+            <input type="text" placeholder="USUARIO" id=regUser name="usuario" required minlength="3" maxlength="25" />
+            </div>
+            
+            <div>
+            <input type="password" placeholder="CONTRASENA" id="regPass" name="contrasena" required minlength="3" maxlength="30"/>
+            </div>
+            
+            <label class="ErrorLogin" id="error-label" >
+            Usuario o contraseña incorrectos</label>
+
+            <input type="submit" value="INICIAR SESIÓN">
+            
+            <p>No tienes cuenta <a href="register.html">Crear Cuenta</a></p>
+        </div>
+    </div>
+    </form>
+
+<script src="js/error.js"></script>
+</body>
+</html>

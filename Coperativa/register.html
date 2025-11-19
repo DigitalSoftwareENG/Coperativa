@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Registro</title>
+</head>
+<body class="BodyRegistro">
+    <form  action="api/register.php"  method="POST" class="FormRegistro">
+    
+        <a href="index.html" class="btn-volver">⮜</a>
+        <div class="ordenformulario">
+            <h1>Registro</h1>
+            
+            <div>
+            <input type="text" placeholder="USUARIO" id=regUser name="Usuario" required minlength="3" maxlength="25" />
+            </div>
+            
+            <div>
+            <input type="password" placeholder="CONTRASENA" id="regPass" name="Contrasena" required minlength="8" maxlength="30"/>
+            </div>
+            
+            <div class="divisionesformulario">
+            <input type="email" placeholder="EMAIL" id="regEmail" name="Email" minlength="15" maxlength="30"/>
+            </div>
+            
+            <div class="divisionesformulario">
+            <input type="text" placeholder="DIRECCION" id="regDireccion" name="Direccion" required maxlength="25" minlength="8" />
+            </div>
+            
+            <div class="divisionesformulario">
+            <input type="tel" placeholder="TELEFONO" id="regTelefono" name="Telefono" required minlength="9" maxlength="9">
+            </div>
+            
+            <div class="divisionesformulario">
+            <input type="text" placeholder="CEDULA" id="regCedula" name="Cedula" minlength="8" maxlength="9"  required />
+            </div>
+            
+            <input type="submit" value="REGISTRARSE">
+            
+            <p>Ya tienes cuenta <a href="login.html">Ingresar</a></p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
